@@ -1,5 +1,6 @@
 # 2025 ASDS Coding Camp
-Lecture handouts and script files for the ASDS code camp at TCD.\
+Here you can find lecture handouts and script files for the ASDS code camp at TCD.
+
 Special thanks to Dr. Martyn Egan, Marina Schenkel, and Trajche Panov for their previous work and input on these course materials.
 
 
