@@ -1,7 +1,7 @@
 # 2025 ASDS Coding Camp
 Here you can find lecture handouts and script files for the ASDS code camp at TCD.
 
-Special thanks to Dr. Martyn Egan, Marina Schenkel, and Trajche Panov for their previous work and input on these course materials.
+Special thanks to Dr. Martyn Egan, Dr. Marina Schenkel, and Dr. Trajche Panov for their previous work and input on these course materials.
 
 
 The *Coding Camp* is designed to give you training in three main areas: R basics, Python basics, and developing an effective computational workflow.
