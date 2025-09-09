@@ -42,7 +42,7 @@ ggplot(data = diamonds, aes(x = price)) +
 
 # Complete the code below to create a histogram of "price", 
 # group by "cut".
-ggplot(diamonds, aes(x = price, fill = ?)) + 
+ggplot(diamonds, aes(x = price, fill = cut)) + 
   geom_histogram(aes(color = cut), alpha = 0.5)
 
 ### Wrangling the data
@@ -55,6 +55,11 @@ an_object <- diamonds[diamonds$cut == "Ideal",]
 anotherObject <- diamonds[diamonds$cut == "Premium", ]
 Object3 <- diamonds[diamonds$cut == "Very Good", ]  
 
+# Renaming: 
+ideal_cut <- diamonds[diamonds$cut == "Ideal",]
+premium_cut <- diamonds[diamonds$cut == "Premium", ]
+very_good_cut <- diamonds[diamonds$cut == "Very Good", ]  
+
 # Each new subset becomes an object with a name. The names provided are not 
 # very good. Choose your own name in keeping with good data science principles, 
 # and edit the code accordingly.
@@ -65,9 +70,9 @@ Object3 <- diamonds[diamonds$cut == "Very Good", ]
 # three types of cut we used to subset the data. Edit and complete
 # the code below to find out.
 
-mean(an_object$price)
-mean(anotherObject)
-mean()
+mean(ideal_cut$price)
+mean(premium_cut$price)
+mean(very_good_cut$price)
 
 
 # What would you need to add to the code above if you wanted to create 3 new
@@ -75,7 +80,9 @@ mean()
 # objects? Go ahead and try it out. 
 
 # Your code here
-
+avg_price_ideal <- mean(ideal_cut$price)
+avg_price_premium <- mean(premium_cut$price)
+avg_price_very_good <- mean(very_good_cut$price)
 
 ### Visualising our data
 
@@ -92,6 +99,12 @@ diamonds %>%
 
 # This could be an important finding. Edit the code above to assign the plot
 # to an object, and give it an appropriate name. 
+
+boxplot_cut <- diamonds %>% 
+  filter(cut %in% c("Ideal", "Premium", "Very Good")) %>%
+  group_by(cut) %>%
+  ggplot(aes(cut, price)) +
+  geom_boxplot()
 
 ### Investigating further
 
@@ -112,9 +125,15 @@ levels(diamonds$cut)
 # on the carat variable for your three diamond subsets.
 
 mean(diamonds$carat)
+
 # mean carat, Ideal diamonds object
+mean(ideal_cut$carat)
+
 # mean carat, Premium diamonds object
+mean(premium_cut$carat)
+
 # mean carat, Very Good diamonds object
+mean(very_good_cut$carat)
 
 ### Recycling code
 
@@ -127,7 +146,13 @@ mean(diamonds$carat)
 
 
 # Your code here
+boxplot_carat <- diamonds %>% 
+  filter(cut %in% c("Ideal", "Premium", "Very Good")) %>%
+  group_by(cut) %>%
+  ggplot(aes(cut, carat)) +
+  geom_boxplot()
 
+boxplot_carat
 
 # %>% is the forward pipe operator
 # it takes the output of the expression on its left and passes it

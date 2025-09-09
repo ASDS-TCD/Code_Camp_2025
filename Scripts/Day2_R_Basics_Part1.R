@@ -67,11 +67,12 @@ z
 ## Can you use the sqrt() function to compute the square root of 962?
 
 # Your code here 
+sqrt(962)
 
 ## Can you now assign to a new object? 
 
 # Your code here
-
+sqrt_962 <- sqrt(962)
 
 #########
 # OOP 
@@ -133,7 +134,7 @@ str_length(x)
 vec2 <- c(alpha = 1, beta = 2, gamma = 3)
 
 # Your code here
-
+vec2["gamma"]
 
 # We can use functions to create objects. Here, we use rnorm() to create an
 # object comprising 50 *random* numbers drawn from the *normal distribution* 
@@ -149,13 +150,16 @@ sd(x)
 # of 100 and a standard deviation of 15. 
 
 # Your code here
-
+rnorm(100, mean = 100, sd = 15)
 
 # Now, assign them to an object named 'data'. 
 # Then, on a new line, call the hist() function on data to plot 
 # a histogram of the random values. 
 
 # Your code here
+data <- rnorm(100, mean = 100, sd = 15)
+
+hist(data)
 
 # A strength of R is that many functions will be applied automatically 
 # to every element in an object. Here, the multiplication function takes
@@ -398,6 +402,32 @@ ggplot(mpg, aes(x = displ)) +
 
 help(mpg)
 head(mpg)
+
+# The simplest example: 
+ggplot(mpg, aes(x = cty)) +
+  geom_histogram()
+
+# The simplest example but a little better looking: 
+ggplot(mpg, aes(x = cty)) +
+  geom_histogram(bins = 20, # number of bins 
+                 fill = "darkblue", # color to fill each bar with
+                 color = "black", # outline of each bar
+                 alpha = 0.5) + # transparency 
+  labs(title = "City miles per gallon - Frequency plot", # title of plot
+       x = "City miles per gallon", # x-axis title
+       y = "Count") + # y-axis title
+  scale_x_continuous(
+    breaks = seq(min(mpg$cty), max(mpg$cty), by = 5)) # tick marks every 5 units
+  
+# And a different example: 
+ggplot(mpg, aes(x = manufacturer, fill = factor(year))) +
+  geom_bar(position = "dodge") +
+  labs(title = "Number of cars by manufacturer and year",
+       x = "Manufacturer",
+       y = "Count",
+       fill = "Year") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 ################
 # And finally...
