@@ -1,6 +1,6 @@
 Win + R
 
-Type sysdm.clp
+Type sysdm.cpl
 
 Advanced --> Environment Variables
 
