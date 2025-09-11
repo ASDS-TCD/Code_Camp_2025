@@ -1,0 +1,3 @@
+C:\Users\<YourUsername>\Anaconda3
+C:\Users\<YourUsername>\Anaconda3\Scripts
+C:\Users\<YourUsername>\Anaconda3\Library\bin
