@@ -1,3 +1,18 @@
+Win + R
+
+Type sysdm.clp
+
+Advanced --> Environment Variables
+
+Choose Path
+
+Add these:
+
+
 C:\Users\<YourUsername>\Anaconda3
 C:\Users\<YourUsername>\Anaconda3\Scripts
 C:\Users\<YourUsername>\Anaconda3\Library\bin
+
+Press OK. 
+
+Restart terminal. 
