@@ -3,7 +3,6 @@ Here you can find lecture handouts and script files for the ASDS code camp at TC
 
 Special thanks to Dr. Martyn Egan, Dr. Marina Schenkel, and Dr. Trajche Panov for their previous work and input on these course materials.
 
-
 The *Coding Camp* is designed to give you training in three main areas: R basics, Python basics, and developing an effective computational workflow.
 
 At the end of camp, students will be able to:
@@ -14,10 +13,11 @@ At the end of camp, students will be able to:
 - Make simple graphs in ggplot2
 - Write professional documents using RMarkdown and LaTeX
 
-This repository contains all lecture handouts and script/markdown files from classes.\
-Files are divided into two folders: code contains code files, documentation contains handouts.\
-You can download this material and work through it yourself. All scripts are commented.\
-The file names correspond to the weekday they were used, note that on Tuesday we used the R script only.
+This repository contains all lecture handouts and script files from classes.
+
+You can download this material and work through it yourself. All scripts are commented.
+
+The file names correspond to the weekday they were used.
 
 **Note**: To download *all* files in a zip, click on the green "code" button on this page and then "download zip".
 
